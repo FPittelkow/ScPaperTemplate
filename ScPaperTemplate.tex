@@ -1,0 +1,69 @@
+\documentclass[	a4paper,
+				12pt,
+				parskip,
+				openbib,
+				toc=bibliography,
+				toc=listof,
+				toc=index
+				]{scrreprt}
+\usepackage{blindtext}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage[british,UKenglish,USenglish,english,american]{babel}
+%\usepackage[ngerman]{babel}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+
+\usepackage[left=3cm,
+			right=2cm,
+			top=2.5cm,
+			bottom=2cm,
+			includeheadfoot]{geometry}
+			
+        \usepackage{scrhack}
+        \usepackage{setspace}
+        \linespread{1}
+
+\usepackage[backend=biber, style=verbose-trad3]{biblatex}
+\addbibresource{ScPaperTemplate.bib}
+
+\usepackage[hidelinks]{hyperref}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{1pt}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\thepage}
+
+
+
+%\usepackage[toc]{glossaries}
+%\usepackage[nottoc]{tocbibind}
+%\makeglossaries
+%\include{Glossary}
+
+\begin{document}
+%\raggedright
+\include{meta}
+\maketitle
+
+\tableofcontents
+
+\include{chapters/one/one_main}
+
+\pagebreak
+%\printglossary
+\listoffigures
+\listoftables
+\printbibliography
+
+\end{document}
