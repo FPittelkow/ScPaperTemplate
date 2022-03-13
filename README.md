@@ -1,0 +1,3 @@
+# ScPaperTemplate
+
+Simple LaTeX Template
